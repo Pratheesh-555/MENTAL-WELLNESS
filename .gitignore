@@ -1,33 +1,185 @@
-# Ignore .env file in the backend directory
+# =========================
+# ENVIRONMENT VARIABLES
+# =========================
+# Environment files (sensitive data)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+*.env
+server/.env
 backend/.env
+frontend/.env
 
-# Ignore node_modules and package-lock.json in the frontend directory
+# =========================
+# NODE.JS / NPM
+# =========================
+# Dependencies
+node_modules/
 frontend/node_modules/
-frontend/package-lock.json
-
-# Ignore node_modules and package-lock.json in the backend directory
 backend/node_modules/
+server/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Package files
+package-lock.json
+yarn.lock
+frontend/package-lock.json
 backend/package-lock.json
+server/package-lock.json
 
-# Ignore Dialogflow key file
-backend/keys/dialogflow-key.json
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Ignore Vercel files
-.vercel
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
 
-# Ignore Python environment and cached files
+# nyc test coverage
+.nyc_output
+
+# =========================
+# PYTHON
+# =========================
+# Python environments
+myenv/
+.venv/
+venv/
+env/
+ENV/
 backend/ai-models/myenv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.python-version
+
+# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+*.dll
+*.lib
 backend/ai-models/**/*.pyd
 backend/ai-models/**/*.dll
 backend/ai-models/**/*.lib
-.venv/
-__pycache__/
-*.pyc 
-*.pyo 
-# Ignore frontend build files
+
+# =========================
+# BUILD & DIST FILES
+# =========================
+# Frontend build files
 frontend/build/
+frontend/dist/
+build/
+dist/
 
-# Ignore log files
+# =========================
+# API KEYS & CREDENTIALS
+# =========================
+# API keys and sensitive files
+backend/keys/
+backend/keys/dialogflow-key.json
+*.key
+*.pem
+*.crt
+credentials.json
+service-account.json
+
+# =========================
+# LOGS & TEMPORARY FILES
+# =========================
+# Log files
 *.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-myenv/
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# =========================
+# DEPLOYMENT
+# =========================
+# Vercel
+.vercel
+.next/
+
+# Heroku
+.env.local
+
+# =========================
+# IDEs & EDITORS
+# =========================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS SPECIFIC
+# =========================
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# =========================
+# DATABASE & UPLOADS
+# =========================
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Upload directories
+uploads/
+public/uploads/
+
+# =========================
+# MISC
+# =========================
+# Backup files
+*.bak
+*.backup
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+node_modules
